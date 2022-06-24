@@ -10,7 +10,7 @@ public class Option {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    long id;
+    Long id;
     String text;
     boolean correct;
 
@@ -22,11 +22,11 @@ public class Option {
         this.correct = correct;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

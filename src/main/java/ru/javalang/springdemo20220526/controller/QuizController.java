@@ -2,6 +2,7 @@ package ru.javalang.springdemo20220526.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.javalang.springdemo20220526.data.QuizData;
@@ -20,6 +21,10 @@ public class QuizController {
     @GetMapping({"","/","/list"})
     public List<Quiz> quizList(){
         return quizRepository.findAll();
-//        return quizRepository.findAll();
+    }
+
+    @GetMapping("{id}")
+    public Quiz getQuiz(@PathVariable Integer id){
+        return quizRepository.findById(id).get();
     }
 }
