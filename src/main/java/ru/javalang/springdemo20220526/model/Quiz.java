@@ -9,6 +9,7 @@ public class Quiz {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Integer id;
+
     String name;
 
     @OneToMany
